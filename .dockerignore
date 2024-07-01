@@ -1,0 +1,12 @@
+Dockerfile
+docker-compose.yml
+docker-compose.yaml
+.env
+.env.local
+node_modules/
+.next/
+.dockerignore
+.gitignore
+.github/
+README.md
+SECURITY.md
