@@ -49,7 +49,7 @@ export function Header({ email }: { email: string }) {
             href="/projects"
             className="text-xl font-bold flex items-center gap-0"
           >
-            Langtrace AI
+            Akivili Trace
           </Link>
           {pathname.includes("/project/") && <ProjectSwitcher email={email} />}
         </div>
@@ -59,16 +59,8 @@ export function Header({ email }: { email: string }) {
               Total Spans Ingested
             </p>
             <p className="text-sm font-semibold">
-              {fetchAccountStats.data?.totalSpans} out of 50,000 per month
+              {fetchAccountStats.data?.totalSpans} spans received
             </p>
-            <Link
-              className="underline text-blue-600 flex items-center"
-              href={SCHEDULE_CALL_LINK}
-              target="_blank"
-            >
-              Book a call
-              <ArrowTopRightIcon className="h-4 w-4 ml-1" />
-            </Link>
           </div>
           <Link href={"https://docs.langtrace.ai/introduction"} target="_blank">
             <Button variant={"secondary"} size={"sm"}>
