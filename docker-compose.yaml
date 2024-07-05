@@ -1,6 +1,6 @@
 services:
   langtrace-app:
-    container_name: langtrace
+    container_name: akivili-trace
     build: .
     working_dir: /app
     env_file:
