@@ -68,7 +68,7 @@ export function ApiKeyDialog({
             onClick={async () => {
               try {
                 setBusy(true);
-                const response = await fetch(`/api/api-key?id=${project_id}`, {
+                const response = await fetch(`/api/api-key?project_id=${project_id}`, {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
