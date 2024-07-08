@@ -38,44 +38,6 @@ export default function LoginForm() {
             Admin Login
           </Button>
         )}
-        <Button
-          onClick={() => {
-            setClickedGoogle(true);
-            signIn("google", {
-              ...(next && next.length > 0 ? { callbackUrl: next } : {}),
-            });
-          }}
-          disabled={clickedGoogle}
-          className="flex items-center gap-2"
-        >
-          <Image
-            src="/google.svg"
-            alt="Google logo"
-            width={24}
-            height={24}
-            className="rounded-full"
-          />
-          Continue with Google
-        </Button>
-        <Button
-          onClick={() => {
-            setClickedAzure(true);
-            signIn("azure-ad", {
-              ...(next && next.length > 0 ? { callbackUrl: next } : {}),
-            });
-          }}
-          disabled={clickedAzure}
-          className="flex items-center gap-2"
-        >
-          <Image
-            src="/azure.svg"
-            alt="Azure logo"
-            width={24}
-            height={24}
-            className="rounded-full"
-          />
-          Continue with Azure AD
-        </Button>
       </div>
       <p className="text-center text-sm text-muted-foreground">
         Don&apos;t have an account?{" "}

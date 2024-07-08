@@ -13,7 +13,7 @@ export default function LoginPage() {
           Sign in to {process.env.NEXT_PUBLIC_APP_NAME}
         </h3>
         <p className="text-sm text-muted-foreground">
-          Open Source Observability for LLM applications
+          Akivili System Observability for LLM applications
         </p>
       </div>
       <div className="flex flex-col space-y-3 bg-muted px-4 py-8 sm:px-16">

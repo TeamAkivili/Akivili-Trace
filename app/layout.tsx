@@ -11,8 +11,8 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Langtrace",
-  description: "Open source observability for your LLM applications",
+  title: "Akivili Trace",
+  description: "Akivili System observability for LLM applications",
 };
 
 export default function RootLayout({
