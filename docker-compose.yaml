@@ -1,5 +1,5 @@
 services:
-  langtrace-app:
+  akivili-trace-app:
     container_name: akivili-trace
     build: .
     working_dir: /app
@@ -21,7 +21,7 @@ services:
         required: true
 
   postgres-db:
-    container_name: langtrace-postgres
+    container_name: trace-postgres
     image: postgres:16.2-bookworm
     env_file:
       - .env
@@ -31,7 +31,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   clickhouse-db:
-    container_name: langtrace-clickhouse
+    container_name: trace-clickhouse
     image: clickhouse/clickhouse-server:24.5.1.1763-alpine
     environment:
       - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
@@ -49,14 +49,6 @@ services:
       interval: 30s
     volumes:
       - clickhouse-data:/var/lib/clickhouse
-
-  langtrace-app-prod:
-    extends:
-      service: langtrace-app
-    build:
-      target: production
-    profiles:
-      - production
 
 volumes:
   postgres-data:
